@@ -6,6 +6,7 @@ let video;
 
 let label = 'waiting...';
 let classifier;
+let confidence;
 
 // STEP 1: Load the model!
 
@@ -53,6 +54,12 @@ function draw() {
   
   textSize(256);
   text(emoji, width/2,height/2);
+
+  textAlign(LEFT);
+  fill(255, 0, 255)
+  textSize(20);
+  text(confidence, width/8, height/4);
+  text(label, width/8, height/4 + 30);
 }
 
 
@@ -62,6 +69,9 @@ function gotResults(error, results){
     return
   }
   label = results[0].label;
+  confidence = results[0].confidence;
+  //console.log(results);
+  
   classifyVideo();
 }
 
