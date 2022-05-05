@@ -11,7 +11,7 @@ let confidence;
 // STEP 1: Load the model!
 
 function preload() {
-  classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/k1FddoiWG/');
+  classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/XsknySoBQ/');
 }
 
 function setup() {
@@ -43,10 +43,10 @@ function draw() {
 
   // STEP 4: Draw the label
   
-  if (label == 'Class 1' && confidence > 0.95) {
+  if (label == 'saic' && confidence > 0.95) {
     // show neutral screen
     saicScreen();
-  } else if (label == 'Class 2') {
+  } else if (label == 'nonsaic') {
     // show SAIC screen
     nonSaicScreen();
   } else {
