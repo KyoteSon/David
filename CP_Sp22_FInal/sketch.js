@@ -46,7 +46,7 @@ function classifyVideo(){
 function draw() {
   // background(0);
   // origianl was confidence = 0.95
-  if (label == 'saic' && confidence > 0.55) {
+  if (label == 'saic' && confidence > 0.95) {
     // show neutral screen
     saicScreen();
    
